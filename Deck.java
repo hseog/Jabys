@@ -1,25 +1,32 @@
-import java.__?.Queue;
+import java.util.ArrayDeque;
+
 public class Deck {
 
-	Queue<Card> pile;
+	private ArrayDeque<Card> pile;
 
 	public Deck() {
-		this.pile = new Queue<Card>();
+		this.pile = new ArrayDeque<Card>();
+		
 	}
 
 	//peek at the top of the pile
 	public Card peek() {
-		return pile.peek();
+		return pile.peekFirst();
 	}
 
 	//draw from the top of the pile
 	public Card draw() {
-		return pile.dequeue();
+		return pile.removeFirst();
 	}
 
 	//place a card at the top of the pile
 	public void put(Card toPut) {
-		return pile.enqueue();
+		return pile.addLast();
+	}
+
+	//size of the deck
+	public int size() {
+		return pile.size();
 	}
 
 

@@ -1,4 +1,6 @@
 //import Stack
+import java.util.Stack;
+import java.util.Collections;
 
 public class DiscardPile {
 
@@ -12,8 +14,8 @@ public class DiscardPile {
 		return pile.pop();
 	}
 
-	public Card put(Card toThrow) {
-		return pile.push(toThrow);
+	public void put(Card toThrow) {
+		pile.push(toThrow);
 	}
 
 	public boolean isEmpty() {
@@ -36,6 +38,8 @@ public class DiscardPile {
 
 		temp = pile;
 		pile = newPile;
+
+		Collections.shuffle(temp);
 
 		return temp;
 	}

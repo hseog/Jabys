@@ -1,9 +1,9 @@
 
-import java.___?.Comparator;
+import java.lang.Comparable;
 
 public class Card {
-	int value; //A is 1, J is 11, Q is 12, K is 13
-	char suit //c is clubs, d is diamonds, h is hearts, s is spades
+	private int value; //A is 1, J is 11, Q is 12, K is 13
+	private char suit //c is clubs, d is diamonds, h is hearts, s is spades
 
 	public Card(int v, char s) {
 		this.value = v;
